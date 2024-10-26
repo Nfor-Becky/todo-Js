@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My ToDo List</title>
+    <link rel="stylesheet" href="todo.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="container m-5">
+        <div class="title text-center text-green-900 text-2xl font-bold">
+            <h2>My ToDo List</h2>
+        </div>
+        <form action="#" id="form" class="h-30 w-30%">
+            <h3 class="text-center text-green-600 font-bold p-3">Add Task</h3>
+            <div class="task">
+                <label for="taskInput" class="text-xl">Task Title</label>
+                <input type="text" class="form-control rounded border-2 border-gray-400 rounded-md p-2 text-gray-500 focus:outline-none block w-full   " id="taskInput">
+                <div id="msg" class="error-message"></div> <!-- For general messages -->
+                <div id="taskInputValidationError" class="hide error-message"></div> <!-- For validation errors -->
+            </div>
+
+            <div class="date">
+                <label for="dateInput" class="text-xl">Due Date</label>
+                <input type="date" class="form-control rounded border-2 border-gray-400 rounded-md p-2 text-gray-500 focus:outline-none block w-full"  id="dateInput">
+            </div>
+
+            <button type="submit" id="add" class="px-4 hover:bg-green-900 rounded bg-green-600 my-5 text-white">ADD TASK</button>
+        </form>
+
+        <h3 class="text-center text-green-600 font-bold">My ToDo List Tasks</h3>
+        <div class="table">
+            <table id="todotable" class="table table-fixed border-2 border-dark-900 w-full text-center">
+                <thead>
+                    <tr>
+                        <th class="border border-gray-300 text-left p-4">Task</th>
+                        <th class="border border-gray-300 text-left p-4">Due Date</th>
+                        <th class="border border-gray-300 text-left p-4">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- task list -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="todo.js"></script>
+</body>
+</html>
